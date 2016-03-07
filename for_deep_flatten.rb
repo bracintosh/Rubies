@@ -2,19 +2,18 @@
 #Recibiendo [[1, 2, 3], [4, 5, 6]] debe retornar [1, 2, 3, 4, 5, 6]
 
 def flatten(arr)
-		my_array = []
-	for i, i < arr.length do
+		result = []
+	for i in arr do
 		if i.is_a? Array
 			temp = flatten(i)
 			for e in temp do
-				my_array.push(e)
+				result.push(e)
 			end
 		else
-		my_array.push(i)
+		result.push(i)
 		end
-		i+=1
 	end
-	my_array
+	result
 end
 
 # NO MODIFICAR DE ESTA LINEA HACIA ABAJO

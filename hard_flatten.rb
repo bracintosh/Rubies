@@ -3,17 +3,17 @@
 
 def flatten(arr)
 	#arr =	arr.flatten
-	myArray = []
+	result = []
 	arr.map! do |w|
 		if w.is_a? Array
 			w.each do |p|
-				myArray.push(p)
+				result.push(p)
 			end
 		else
-		myArray.push(w)
+		result.push(w)
 		end
 	end
-	myArray
+	result
 end
 
 

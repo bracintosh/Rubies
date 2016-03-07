@@ -3,16 +3,16 @@
 
 
 def flatten(arr)
-	myArray = []
+	result = []
 	arr.each do |w|
 		if w.is_a? Array
 			temp = flatten(w)
-			temp.each {|e| myArray.push(e)}
+			temp.each {|e| result.push(e)}
 		else
-			myArray.push(w)
+			result.push(w)
 		end	
 	end
-	myArray
+	result
 end
 
 # NO MODIFICAR DE ESTA LINEA HACIA ABAJO
