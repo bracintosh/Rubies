@@ -11,7 +11,7 @@ def get_month(month)
   if month>0 && month<=12
     month
   else
-    puts "That's not a month, we only have 12 a year, \nPlease. give me a correct one."
+    puts "That's not a month, we only have 12 every year. \nPlease, give me a correct one."
     get_month(gets.chomp.to_i)
   end
 end
@@ -20,13 +20,13 @@ def get_year(year)
   if year <= Time.new.year
     year
   else
-    puts "You are from the future!? No way! \nC'mon, tell me your REAL year of birth."
+    puts " No way!! You are from the future!? \nC'mon, tell me your REAL year of birth."
     get_year(gets.chomp.to_i)
   end
 end
 
 def seconds_old
-  puts "I'm gonna guess how many seconds old you are \nbased on your birth date B|. Ready?"
+  puts "I'm gonna tell you how many seconds old you are \nbased on your birth date B|. Ready?"
   puts "The day you were born (the number please, not the name): "
   day = get_day(gets.chomp.to_i)
   puts ""

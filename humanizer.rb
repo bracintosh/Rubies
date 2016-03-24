@@ -55,3 +55,4 @@ end
 puts humanizer(98)
 puts humanizer(10)
 puts humanizer(945)
+puts humanizer(742)
