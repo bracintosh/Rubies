@@ -1,3 +1,6 @@
+#This program will tell you an aproximate of your age in seconds.
+#TODO: To be more precise, it should ask for an hour of birth if the user happens to know it.
+
 def get_day(day)
   if day>0 && day<=31
     day
@@ -38,7 +41,7 @@ def seconds_old
   puts ""
   birthdate = Time.local(year, month, day)
   age_in_seconds = (Time.new - birthdate).to_i
-  puts "You're #{age_in_seconds} seconds old my friend :)"
+  puts "You're #{age_in_seconds} seconds old."
 end
 
 seconds_old

@@ -1,3 +1,5 @@
+#Made my own .map method with the help of yield
+
 def __map(arr)
 	if arr.is_a? Array or Hash
 		result = []
@@ -14,5 +16,5 @@ end
 __map([1, "potato", 26, "Allahu akbar!", 2*3]){|element|
 		#Code starts here
 
-		#Here ends your code
+		#Code ends here
 	}

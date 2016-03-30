@@ -1,16 +1,16 @@
-#Escribir un metodo que reduzca un array de arrays a un array simple. Ejemplo:
+#Escribir un metodo que reduzca un array de arrays a un array simple sin usar métodos de la librería Enumerable. Ejemplo:
 #Recibiendo [[1, 2, 3], [4, 5, 6]] debe retornar [1, 2, 3, 4, 5, 6]
 
 def flatten(arr)
 		result = []
-	for i in arr do
-		if i.is_a? Array
-			temp = flatten(i)
-			for e in temp do
-				result.push(e)
+	for element in arr do
+		if element.is_a? Array
+			temp = flatten(element)
+			for recursive in temp do
+				result.push(recursive)
 			end
 		else
-		result.push(i)
+		result.push(element)
 		end
 	end
 	result

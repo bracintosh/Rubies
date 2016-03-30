@@ -1,3 +1,5 @@
+#Made my own .each method using yield
+
 def __each(arr)
 	if arr.is_a? Array or Hash
 		for element in arr do
@@ -10,6 +12,6 @@ end
 
 __each([1, "potato", 26, "Allahu akbar!", 2*3]){|element|
 		#Code starts here
-		puts element
+		
 		#Here ends your code
 	}

@@ -4,12 +4,12 @@
 
 def flatten(arr)
 	result = []
-	arr.each do |w|
-		if w.is_a? Array
-			temp = flatten(w)
-			temp.each {|e| result.push(e)}
+	arr.each do |element|
+		if element.is_a? Array
+			temp = flatten(element)
+			temp.each {|recursive| result.push(recursive)}
 		else
-			result.push(w)
+			result.push(element)
 		end	
 	end
 	result

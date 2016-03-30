@@ -4,13 +4,13 @@
 def flatten(arr)
 	#arr =	arr.flatten
 	result = []
-	arr.map! do |w|
-		if w.is_a? Array
-			w.each do |p|
-				result.push(p)
+	arr.map! do |element|
+		if element.is_a? Array
+			element.each do |object|
+				result.push(object)
 			end
 		else
-		result.push(w)
+		result.push(element)
 		end
 	end
 	result

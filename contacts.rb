@@ -1,15 +1,18 @@
-class Contact
-  attr_reader :firstname, :lastname, :phone_number
+#This program allows the user to save contacts and list them
+#TODO: Delete and update contacts
 
-  def initialize(firstname, lastname, phone_number)
-    @firstname = firstname
-    @lastname = lastname
+class Contact
+  attr_reader :first_name, :last_name, :phone_number
+
+  def initialize(first_name, last_name, phone_number)
+    @first_name = first_name
+    @last_name = last_name
     @phone_number = phone_number
   end
 
-  def saveSuccess
-    puts "Your contact #{firstname+" "+ lastname} has been saved successfully!"
-    puts "#{firstname}'s phone number is #{phone_number}\n "
+  def save_success
+    puts "Your contact #{first_name+" "+ last_name} has been saved successfully!"
+    puts "#{first_name}'s phone number is #{phone_number}\n "
   end
 end
 
@@ -17,8 +20,8 @@ def list_contacts(contacts)
     if contacts.empty?
       puts "You don't have any contacts yet. \n "
     else
-      contacts.each_with_index do |c, i|
-        puts "#{i+1}- #{c.firstname} #{c.lastname} \n   #{c.phone_number} \n "
+      contacts.each_with_index do |contact, i|
+        puts "#{i+1}- #{contact.first_name} #{contact.last_name} \n   #{contact.phone_number} \n "
       end
     end
 end
@@ -40,17 +43,17 @@ def phonebook
 
     if option == 1
       puts "You have chosen to create a new contact, please fill in the information asked below."
-      puts "Firstname: "
-      firstname = gets.chomp
+      puts "first_name: "
+      first_name = gets.chomp
       puts ""
-      puts "Lastname: "
-      lastname = gets.chomp
+      puts "last_name: "
+      last_name = gets.chomp
       puts ""
       puts "Phone number: "
       phone = gets.chomp.to_i
       puts ""
-      contact = Contact.new(firstname, lastname, phone)
-      contact.saveSuccess
+      contact = Contact.new(first_name, last_name, phone)
+      contact.save_success
       contacts << contact
     elsif option == 2
       list_contacts(contacts)
